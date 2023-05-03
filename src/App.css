@@ -1,0 +1,81 @@
+@import-normalize;
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: local('SF UI Display Thin'), local('SFUIDisplay-Thin'),
+    url('fonts/SFUIDisplay-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: local('SF UI Display Medium'), local('SFUIDisplay-Medium'),
+    url('fonts/SFUIDisplay-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: local('SF UI Display Regular'), local('SFUIDisplay-Regular'),
+    url('fonts/SFUIDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: local('SF UI Display Bold'), local('SFUIDisplay-Bold'),
+    url('fonts/SFUIDisplay-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: local('SF UI Display Light'), local('SFUIDisplay-Light'),
+    url('fonts/SFUIDisplay-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  margin-bottom: 100px;
+  font-family: 'Droid Sans';
+}
+
+/* h1 {
+  display: inline;
+} */
+
+main {
+  padding: 0 80px 100px 80px;
+}
+
+@media (max-width: 640px) {
+  main {
+    padding: 0 20px 50px 20px;
+  }
+}

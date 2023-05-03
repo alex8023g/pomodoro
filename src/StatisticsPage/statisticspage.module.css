@@ -1,0 +1,176 @@
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.statisticsBlockContainer {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+/* @media (max-width: 640px) {
+  .statisticsBlockContainer {
+    display: block;
+    gap: 16px;
+    width: 100%;
+  }
+} */
+
+.dayStatistics {
+  width: 296px;
+  height: 471px;
+  /* margin-right: 32px; */
+  /* border: 1px solid coral; */
+}
+
+.dayHours {
+  /* border: 1px solid blue; */
+  height: 210px;
+  margin-bottom: 32px;
+  padding: 25px;
+  background-color: #f4f4f4;
+}
+
+.fullWeekDay {
+  margin: 0 0 14px 0;
+  font-weight: 700;
+  font-size: 24px;
+  /* color: #dc3e22; */
+}
+
+.youWork {
+  font-weight: 500;
+  font-size: 16px;
+  /* color: #dc3e22; */
+}
+
+.workTime {
+  font-weight: 700;
+  font-size: 16px;
+  white-space: nowrap;
+
+  color: #dc3e22;
+}
+
+.dayPomodoros {
+  /* border: 1px solid green; */
+  height: 179px;
+  background-color: #f4f4f4;
+}
+
+.dayPomodorosTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 144px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #999;
+}
+
+.dayPomodorosBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  font-weight: 700;
+  font-size: 24px;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #dc3e22;
+}
+
+.chartContainer {
+  position: relative; /*Parent MUST be relative*/
+  z-index: 9;
+  /* width: '100%'; */
+  flex-grow: 3;
+  width: 952px;
+  height: 471px;
+  background-color: #f4f4f4;
+}
+
+.chartContainer:before {
+  content: '';
+  position: absolute; /*set 'child' to be absolute*/
+  z-index: -1; /*Make this lower so text appears in front*/
+
+  /*You can choose to align it left, right, top or bottom here*/
+  /* top: 0; */
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 35px;
+  background: #ececec;
+}
+
+.dayStatisticsBottom {
+  display: flex;
+  gap: 2%;
+  justify-content: space-between;
+  /* outline: auto; */
+  height: 179px;
+}
+
+.focPausStop {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 405px;
+  padding: 25px;
+}
+
+.focPausStop h4 {
+  margin: 0 0 0 0;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.focPausStop p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 64px;
+}
+
+.focPausStopTextBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.focus {
+  background-color: #ffdda9;
+}
+
+.pause {
+  background-color: #dfdcfe;
+  /* flex-basis: 405px; */
+}
+
+.stops {
+  background-color: #c5f1ff;
+  /* flex-basis: 405px; */
+}
+
+.noWrapText {
+  white-space: nowrap;
+}
+
+@media (max-width: 1000px) {
+  .statisticIcons {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .statisticsBlockContainer {
+    flex-wrap: wrap;
+  }
+  .dayStatisticsBottom {
+    flex-wrap: wrap;
+  }
+  .statisticIcons {
+    display: block;
+  }
+}
