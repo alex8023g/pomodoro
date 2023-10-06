@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import './App.css';
 import { Header } from './Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { TimerPage } from './TimerPage';
-import { StatisticsPage } from './StatisticsPage';
+import { TimerPage } from './pages/TimerPage';
+import { StatisticsPage } from './pages/StatisticsPage';
 import useTaskStore from './store';
 import { useInterval } from './hooks/useInterval';
 

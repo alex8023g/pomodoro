@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import useTaskStore from '../store';
+import useTaskStore from '../../store';
 import styles from './statisticspage.module.css';
 import { style } from './style';
 import './statisticspage.css';
@@ -10,10 +10,10 @@ import { InputLabel, MenuItem, FormControl, Typography } from '@mui/material';
 // import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { LineChart, Line, CartesianAxis, Text } from 'recharts';
-import { ReactComponent as TomatoIcon } from '../icons/tomato2.svg';
-import { ReactComponent as FocusIcon } from '../icons/focus.svg';
-import { ReactComponent as PauseIcon } from '../icons/pause.svg';
-import { ReactComponent as StopsIcon } from '../icons/stops.svg';
+import { ReactComponent as TomatoIcon } from '../../icons/tomato2.svg';
+import { ReactComponent as FocusIcon } from '../../icons/focus.svg';
+import { ReactComponent as PauseIcon } from '../../icons/pause.svg';
+import { ReactComponent as StopsIcon } from '../../icons/stops.svg';
 
 import {
   BarChart,
@@ -276,7 +276,7 @@ export function StatisticsPage() {
             <p>
               {Math.round(
                 (activeItem.workTime / (activeItem.workTime + activeItem.pauseTime)) * 100
-              )}
+              ) || 0}
               %
             </p>
           </div>

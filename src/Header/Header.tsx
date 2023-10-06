@@ -12,30 +12,17 @@ export function Header() {
   const [isLogged, setIsLogged] = useState(false);
   return (
     <AppBar position='sticky' sx={style.appbar}>
-      {/* <AppBar position='sticky' sx={{ bgcolor: 'white' }}> */}
       <Toolbar>
         <div className={styles.leftBlock}>
           <Link to='/'>
             <div className={styles.tomatoIcon}>
               <TomatoIcon />
             </div>
-            <h1 className={styles.h1}>pomodoro_box</h1>
-            {/* <Typography
-              variant='h4'
-              component='h1'
-              sx={{
-                color: 'red',
-                pl: '10px',
-                mr: 'auto',
-              }}
-            >
-              pomodoro_box
-            </Typography> */}
+            <h1 className={styles.h1}>pomodoro</h1>
           </Link>
         </div>
         <NavLink to='./statistics'>
           <Button sx={style.button}>
-            {/* <Button sx={{ color: '#DC3E22' }}> */}
             <div className={styles.EqualizerIcon}>
               <EqualizerIcon />
             </div>
@@ -43,7 +30,7 @@ export function Header() {
           </Button>
         </NavLink>
 
-        {isLogged ? (
+        {/* {isLogged ? (
           <AccountCircleIcon
             onClick={() => {
               setIsLogged(!isLogged);
@@ -56,11 +43,10 @@ export function Header() {
               setIsLogged(!isLogged);
             }}
             sx={style.button}
-            // sx={{ color: '#DC3E22' }}
           >
             Login
           </Button>
-        )}
+        )} */}
       </Toolbar>
     </AppBar>
   );
