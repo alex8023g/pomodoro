@@ -1,5 +1,6 @@
 .leftBlock {
-margin-right: auto;
+  margin-right: auto;
+  flex-grow: 1;
 }
 
 .tomatoIcon {
@@ -13,13 +14,13 @@ margin-right: auto;
   display: inline;
   position: relative;
   bottom: 10px;
-  color: #DC3E22;
+  color: #dc3e22;
   font-family: SF UI Display;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
 .EqualizerIcon {

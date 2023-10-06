@@ -32,7 +32,20 @@ const useTaskStore = create<IStoreTask>()(
     persist(
       (set) => ({
         statistics: [],
-        tasks: [],
+        tasks: [
+          {
+            taskText: 'задача №1',
+            id: 'liccY1YsDOO_3Tf5-j4Gf',
+            pomodoroTotal: 2,
+            pomodoroDone: 1,
+          },
+          {
+            taskText: 'задача №2',
+            id: 'Vkab0mLY0y3L1H5SKiqBt',
+            pomodoroTotal: 4,
+            pomodoroDone: 0,
+          },
+        ],
         // сохраняет статистику за последние две недели
         setStatistics: (newStatistics: IDayStatistic[]) =>
           set(() => ({

@@ -7,6 +7,7 @@ import { TaskMenu } from '../TaskMenu';
 import styles from './task.module.css';
 import { Draggable } from 'react-beautiful-dnd';
 import { style } from './style';
+import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
 
 export interface ITaskProps1 {
   task: ITask;
@@ -49,8 +50,8 @@ export function Task({ task, index }: ITaskProps1) {
             sx={style.paper}
             onSubmit={(e) => saveEditedTask(e, task.id)}
           >
+            <DragIndicatorIcon fontSize='medium' />
             <div className={styles.circle}>{task.pomodoroTotal}</div>
-
             <InputBase
               sx={style.inputbase}
               inputProps={{ 'aria-label': 'input task' }}

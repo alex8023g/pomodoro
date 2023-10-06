@@ -18,7 +18,13 @@ export function TimerBlock() {
           sx={style.cardheader}
           className={styles[timerState]}
           title={tasksStore[0]?.taskText ? tasksStore[0].taskText : 'Добавьте задачу'}
-          subheader={tasksStore[0] ? `Помидор ${tasksStore[0]?.pomodoroDone + 1}` : ''}
+          subheader={
+            tasksStore[0]
+              ? `Помидор ${tasksStore[0]?.pomodoroDone + 1} из ${
+                  tasksStore[0]?.pomodoroTotal
+                }`
+              : ''
+          }
           content={{ display: 'flex', justifyContent: 'space-between' }}
           titleTypographyProps={{
             fontSize: 16,

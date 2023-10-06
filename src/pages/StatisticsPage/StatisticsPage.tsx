@@ -26,6 +26,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
+import { Layout } from '../../components/Layout';
 
 export interface IDayStatistic {
   workDate: string;
@@ -172,7 +173,7 @@ export function StatisticsPage() {
   };
 
   return (
-    <div className={styles.container}>
+    <Layout>
       <Box sx={style.box}>
         {/* <Box sx={{ display: 'flex', justifyContent: 'space-between' }}> */}
         {/* <Typography variant='h4' component='h3'> */}
@@ -310,6 +311,6 @@ export function StatisticsPage() {
       <p className='content'>{`focus "${activeItem.weekDay}": ${Math.round(
         (activeItem.workTime / activeItem.fullTime) * 100
       )}`}</p> */}
-    </div>
+    </Layout>
   );
 }
