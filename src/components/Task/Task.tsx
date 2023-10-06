@@ -2,7 +2,7 @@ import { Divider, InputBase, ListItem, Paper } from '@mui/material';
 import produce from 'immer';
 import React, { useEffect, useRef, useState } from 'react';
 import { ITask } from '../TaskBlock';
-import useTaskStore from '../store';
+import useTaskStore from '../../store';
 import { TaskMenu } from '../TaskMenu';
 import styles from './task.module.css';
 import { Draggable } from 'react-beautiful-dnd';

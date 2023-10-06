@@ -3,7 +3,7 @@ import styles from './timerblock.module.css';
 import { style } from './style';
 import { Box, Card, CardContent, CardHeader } from '@mui/material';
 import { Timer } from '../Timer';
-import useTaskStore from '../store';
+import useTaskStore from '../../store';
 
 export type TTimerState = 'stop' | 'work' | 'break';
 

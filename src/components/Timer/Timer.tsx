@@ -1,9 +1,9 @@
 import Button from '@mui/material/Button';
 import React, { useState, Dispatch, SetStateAction } from 'react';
-import useTaskStore from '../store';
+import useTaskStore from '../../store';
 import { TTimerState } from '../TimerBlock';
 import styles from './timer.module.css';
-import { useInterval } from '../hooks/useInterval';
+import { useInterval } from '../../hooks/useInterval';
 import { LeftBtn } from '../LeftBtn';
 import { RightBtn } from '../RightBtn';
 

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { TTimerState } from '../TimerBlock';
-
+import { TTimerState } from '../components/TimerBlock';
 
 type TCb = () => void;
 
@@ -10,7 +9,7 @@ export function useInterval(
   delay: number
   // timerState: TTimerState
 ) {
-  const savedCallback = useRef(() => { });
+  const savedCallback = useRef(() => {});
 
   // Remember the latest function.
   useEffect(() => {

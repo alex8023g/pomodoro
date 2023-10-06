@@ -1,6 +1,6 @@
 import Button from '@mui/material/Button';
 import React, { Dispatch, SetStateAction } from 'react';
-import useTaskStore from '../store';
+import useTaskStore from '../../store';
 import { TBreakPeriod, TStartBtnV, TStopBtnV } from '../Timer';
 import { TTimerState } from '../TimerBlock';
 

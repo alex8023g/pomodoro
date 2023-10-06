@@ -4,7 +4,7 @@ import { Box, Divider, IconButton, InputBase, List, Paper } from '@mui/material'
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import { Task } from '../Task';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
-import useTaskStore from '../store';
+import useTaskStore from '../../store';
 import { nanoid } from 'nanoid';
 import { TransitionGroup } from 'react-transition-group';
 import Collapse from '@mui/material/Collapse';

@@ -3,8 +3,8 @@ import { green } from '@mui/material/colors';
 import React, { useState } from 'react';
 import styles from './header.module.css';
 import { style } from './styles';
-import { ReactComponent as TomatoIcon } from '../icons/tomato1.svg';
-import { ReactComponent as EqualizerIcon } from '../icons/equalizer.svg';
+import { ReactComponent as TomatoIcon } from '../../icons/tomato1.svg';
+import { ReactComponent as EqualizerIcon } from '../../icons/equalizer.svg';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Link, NavLink } from 'react-router-dom';
 

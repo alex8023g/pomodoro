@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { devtools } from 'zustand/middleware';
 import { IDayStatistic } from './pages/StatisticsPage';
-import { ITask } from './TaskBlock';
+import { ITask } from './components/TaskBlock';
 
 export interface IStoreTask {
   statistics: IDayStatistic[];
