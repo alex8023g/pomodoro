@@ -5,9 +5,6 @@ import { style } from './style';
 import './statisticspage.css';
 import Box from '@mui/material/Box';
 import { InputLabel, MenuItem, FormControl, Typography } from '@mui/material';
-// import InputLabel from '@mui/material/InputLabel';
-// import MenuItem from '@mui/material/MenuItem';
-// import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { LineChart, Line, CartesianAxis, Text } from 'recharts';
 import { ReactComponent as TomatoIcon } from '../../icons/tomato2.svg';
@@ -61,7 +58,6 @@ export function StatisticsPage() {
   ]);
 
   const [activeIndex, setActiveIndex] = useState(0);
-  // const [weekDay, setWeekDay] = useState(0);
   const fullWeekDay = [
     'Понедельник',
     'Вторник',
@@ -175,22 +171,12 @@ export function StatisticsPage() {
   return (
     <Layout>
       <Box sx={style.box}>
-        {/* <Box sx={{ display: 'flex', justifyContent: 'space-between' }}> */}
-        {/* <Typography variant='h4' component='h3'> */}
         <h2>Ваша активность</h2>
-        {/* </Typography> */}
-
-        <FormControl
-          sx={style.formcontrol}
-          // sx={{ minWidth: 200 }}
-          // fullWidth
-        >
-          {/* <InputLabel id='demo-simple-select-label'>Age</InputLabel> */}
+        <FormControl sx={style.formcontrol}>
           <Select
             labelId='demo-simple-select-label'
             id='demo-simple-select'
             value={stepWeek}
-            // label='Age'
             onChange={handleMenuChange}
           >
             <MenuItem value={'0'}>Эта неделя</MenuItem>
@@ -199,7 +185,6 @@ export function StatisticsPage() {
           </Select>
         </FormControl>
       </Box>
-      {/* <br /> */}
       <div className={styles.statisticsBlockContainer}>
         <div className={styles.dayStatistics}>
           <div className={styles.dayHours}>
@@ -214,16 +199,11 @@ export function StatisticsPage() {
             <div className={styles.dayPomodorosBottom}>
               {activeItem.pomDoneToday} {PomodorosFunc(activeItem.pomDoneToday)}
             </div>
-            {/* <p className='content'>{`pomDoneToday: ${activeItem.pomDoneToday}`}</p> */}
           </div>
         </div>
         <div className={styles.chartContainer}>
           <ResponsiveContainer width='99%'>
-            <BarChart
-              // width={952}
-              // height={471}
-              data={weekStat}
-            >
+            <BarChart data={weekStat}>
               <CartesianGrid vertical={false} stroke='#ccc' />
               <Bar dataKey='workTime' onClick={handleClick}>
                 {weekStat.map((entry, index) => (
@@ -237,17 +217,12 @@ export function StatisticsPage() {
               <XAxis
                 dataKey='weekDay'
                 onClick={(e: any) => {
-                  // console.log(e.index);
                   handleClick('', e.index);
                 }}
                 cursor='pointer'
                 tickLine={false}
                 axisLine={false}
                 tick={(e) => {
-                  // console.log(e);
-                  // const {
-                  //   payload: { value },
-                  // } = e;
                   const color = e.payload.index === activeIndex ? '#DC3E22' : '#999';
                   e['fill'] = color;
                   e['fontSize'] = '24px';
@@ -263,9 +238,7 @@ export function StatisticsPage() {
                 interval='preserveStart'
                 width={90}
                 tickCount={6}
-                // padding={{ top: 10 }}
               />
-              {/* <CartesianAxis/> */}
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -300,17 +273,6 @@ export function StatisticsPage() {
           <StopsIcon className={styles.statisticIcons} />
         </div>
       </div>
-      {/* <p className='content'>{`дата "${activeItem.workDate}`}</p>
-      <p className='content'>"stepWeek "{stepWeek}</p>
-      <p className='content'>{`день недели "${activeItem.weekDay}`}</p>
-      <p className='content'>{`fullTime: ${activeItem.fullTime}`}</p>
-      <p className='content'>{`workTime: ${activeItem.workTime}`}</p>
-      <p className='content'>{`pomDoneToday: ${activeItem.pomDoneToday}`}</p>
-      <p className='content'>{`pauseTime: ${activeItem.pauseTime}`}</p>
-      <p className='content'>{`stopsNumb: ${activeItem.stopsNumb}`}</p>
-      <p className='content'>{`focus "${activeItem.weekDay}": ${Math.round(
-        (activeItem.workTime / activeItem.fullTime) * 100
-      )}`}</p> */}
     </Layout>
   );
 }

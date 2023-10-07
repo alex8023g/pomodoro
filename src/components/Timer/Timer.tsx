@@ -9,10 +9,8 @@ import { RightBtn } from '../RightBtn';
 
 export type TStartBtnV = 'старт' | 'пауза' | 'продолжить';
 export type TStopBtnV = 'стоп' | 'сделано' | 'пропустить';
-// type TWorkState = 'work' | 'break';
 export type TBreakPeriod = 900_000 | 300_000;
 const workPeriod = 1_500_000;
-// let breakPeriod: TBreakPeriod = 300_000;
 
 export function Timer({
   timerState,
@@ -26,7 +24,6 @@ export function Timer({
   const [startBtnV, setStartBtnV] = useState<TStartBtnV>('старт');
   const [stopBtnV, setStopBtnV] = useState<TStopBtnV>('стоп');
   const [isStopBtnDisabled, setIsStopBtnDisabled] = useState(true);
-  // const [workState, setWorkState] = useState<TWorkState>('work');
   const [isWorkPause, setIsWorkPause] = useState(false);
   const [breakPeriod, setBreakPeriod] = useState<TBreakPeriod>(300_000);
 
@@ -47,7 +44,6 @@ export function Timer({
 
   useInterval(
     () => {
-      // Your custom logic here
       if (millisec > 0) {
         setMillisec((v) => v - 1000);
         if (timerState === 'work') {
@@ -81,66 +77,7 @@ export function Timer({
     },
     isRunning,
     1000
-    // timerState
   );
-
-  // function handleStartBtn() {
-  //   if (startBtnV === 'старт') {
-  //     setIsRunning(true);
-  //     setStartBtnV('пауза');
-  //     setIsStopBtnDisabled(false);
-  //     if (timerState === 'stop') {
-  //       setTimerState('work');
-  //     }
-  //   } else if (startBtnV === 'пауза') {
-  //     setIsRunning(false);
-  //     setStartBtnV('продолжить');
-  //     if (timerState === 'work') {
-  //       setStopBtnV('сделано');
-  //       setIsWorkPause(true);
-  //     }
-  //   } else if (startBtnV === 'продолжить') {
-  //     setIsRunning(true);
-  //     setStartBtnV('пауза');
-  //     if (timerState === 'work') {
-  //       setStopBtnV('стоп');
-  //       setIsWorkPause(false);
-  //     }
-  //   }
-  // }
-
-  // function handleStopBtn() {
-  //   if (stopBtnV === 'стоп') {
-  //     incStopsNumb();
-  //     setIsRunning(false);
-  //     setMillisec(workPeriod);
-  //     setStartBtnV('старт');
-  //     setIsStopBtnDisabled(true);
-  //     setTimerState('stop');
-  //   } else if (stopBtnV === 'сделано') {
-  //     setIsRunning(false);
-  //     setIsWorkPause(false);
-  //     incPomDoneToday();
-  //     if ((tasksStore[0].pomodoroDone + 1) % 4 === 0) {
-  //       breakPeriod = 900_000;
-  //     } else {
-  //       breakPeriod = 300_000;
-  //     }
-  //     setMillisec(breakPeriod);
-  //     setStartBtnV('старт');
-  //     setStopBtnV('пропустить');
-  //     setIsStopBtnDisabled(true);
-  //     setTimerState('break');
-  //   } else if (stopBtnV === 'пропустить') {
-  //     setIsRunning(false);
-  //     setMillisec(workPeriod);
-  //     setStartBtnV('старт');
-  //     setStopBtnV('стоп');
-  //     setIsStopBtnDisabled(true);
-  //     setTimerState('stop');
-  //     increasePomodoroDone(tasksStore[0]);
-  //   }
-  // }
 
   return (
     <>
@@ -150,15 +87,7 @@ export function Timer({
           ? `Задача: ${tasksStore[0].taskText}`
           : 'Добавьте задачу'}
       </p>
-      {/* <Button
-        variant='contained'
-        color='success'
-        sx={{ mr: 2 }}
-        onClick={handleStartBtn}
-        disabled={!tasksStore[0] ? true : false}
-      >
-        {startBtnV}
-      </Button> */}
+
       <LeftBtn
         startBtnV={startBtnV}
         setIsRunning={setIsRunning}
@@ -170,16 +99,6 @@ export function Timer({
         setIsWorkPause={setIsWorkPause}
       />
 
-      {/* <Button
-        variant='outlined'
-        color='error'
-        onClick={handleStopBtn}
-        disabled={isStopBtnDisabled}
-      >
-        {stopBtnV}
-      </Button> */}
-      {/* <br />
-      <br /> */}
       <RightBtn
         stopBtnV={stopBtnV}
         setStopBtnV={setStopBtnV}

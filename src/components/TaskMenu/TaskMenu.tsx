@@ -64,17 +64,7 @@ export function TaskMenu({ task, isEdit2, setIsEdit }: asd) {
   return (
     <>
       {isEdit2 ? (
-        <IconButton
-          ref={anchorRef}
-          // id='composition-button'
-          // aria-controls={open ? 'composition-menu' : undefined}
-          // aria-expanded={open ? 'true' : undefined}
-          // aria-haspopup='true'
-          // aria-label='directions'
-          color='primary'
-          sx={style.iconbutton}
-          type='submit'
-        >
+        <IconButton ref={anchorRef} color='primary' sx={style.iconbutton} type='submit'>
           <KeyboardReturnIcon />
         </IconButton>
       ) : (

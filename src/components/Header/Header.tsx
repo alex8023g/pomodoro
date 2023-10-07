@@ -2,16 +2,13 @@ import { AppBar, Button, Toolbar, Typography } from '@mui/material';
 import { green } from '@mui/material/colors';
 import React, { useState } from 'react';
 import styles from './header.module.css';
-
 import { ReactComponent as TomatoIcon } from '../../icons/tomato1.svg';
 import { ReactComponent as EqualizerIcon } from '../../icons/equalizer.svg';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Link, NavLink } from 'react-router-dom';
 
 export function Header() {
-  const [isLogged, setIsLogged] = useState(false);
   return (
-    <AppBar position='sticky' sx={{ bgcolor: 'white', display: 'block' }}>
+    <AppBar position='sticky' sx={{ display: 'block', mb: 5, bgcolor: 'white' }}>
       <Toolbar
         sx={{ maxWidth: '1440px', justifyContent: 'space-between', margin: '0 auto' }}
       >
@@ -31,24 +28,6 @@ export function Header() {
             <span className={styles.statisticsText}>Статистика</span>
           </Button>
         </NavLink>
-
-        {/* {isLogged ? (
-          <AccountCircleIcon
-            onClick={() => {
-              setIsLogged(!isLogged);
-            }}
-            htmlColor={'red'}
-          />
-        ) : (
-          <Button
-            onClick={() => {
-              setIsLogged(!isLogged);
-            }}
-            sx={style.button}
-          >
-            Login
-          </Button>
-        )} */}
       </Toolbar>
     </AppBar>
   );

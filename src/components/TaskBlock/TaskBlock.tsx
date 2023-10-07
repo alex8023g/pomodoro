@@ -55,7 +55,6 @@ export function TaskBlock() {
   }
   return (
     <>
-      {/* <p>Список задач </p> */}
       <Box display='flex' justifyContent='center'>
         <Paper
           component='form'
@@ -88,7 +87,6 @@ export function TaskBlock() {
         <DragDropContext onDragEnd={onDragEnd}>
           <Droppable droppableId='droppableId'>
             {(provided) => (
-              // @ts-ignore
               <List sx={style.list} ref={provided.innerRef} {...provided.droppableProps}>
                 <TransitionGroup>
                   {tasksStore.map((task: ITask, index: number) => (

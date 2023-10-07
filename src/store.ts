@@ -34,7 +34,7 @@ const useTaskStore = create<IStoreTask>()(
         statistics: [],
         tasks: [
           {
-            taskText: 'задача №1',
+            taskText: 'Написать тесты',
             id: 'liccY1YsDOO_3Tf5-j4Gf',
             pomodoroTotal: 2,
             pomodoroDone: 1,
