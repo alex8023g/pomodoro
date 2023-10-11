@@ -3,3 +3,9 @@
   margin: 0 auto;
   padding: 0 24px;
 }
+
+@media (max-width: 599px) {
+  .layout {
+    padding: 0 16px;
+  }
+}
