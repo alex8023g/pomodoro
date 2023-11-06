@@ -30,13 +30,12 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
-        <main>
-          <Routes>
-            <Route path='/' element={<TimerPage />} />
+        <Routes>
+          <Route path='/' element={<Header />}>
+            <Route index element={<TimerPage />} />
             <Route path='/statistics' element={<StatisticsPage />} />
-          </Routes>
-        </main>
+          </Route>
+        </Routes>
       </BrowserRouter>
     </>
   );
