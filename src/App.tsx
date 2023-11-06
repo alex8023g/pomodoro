@@ -6,6 +6,7 @@ import { TimerPage } from './pages/TimerPage';
 import { StatisticsPage } from './pages/StatisticsPage';
 import useTaskStore from './store';
 import { useInterval } from './hooks/useInterval';
+import { Page404 } from './pages/Page404';
 
 function App() {
   const statisticsStore = useTaskStore((state) => state.statistics);
@@ -34,6 +35,7 @@ function App() {
           <Route path='/' element={<Header />}>
             <Route index element={<TimerPage />} />
             <Route path='/statistics' element={<StatisticsPage />} />
+            <Route path='*' element={<Page404 />} />
           </Route>
         </Routes>
       </BrowserRouter>
